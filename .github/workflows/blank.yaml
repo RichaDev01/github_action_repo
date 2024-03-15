@@ -19,6 +19,10 @@ jobs:
           architecture: 'x64'
       # You can test your matrix by printing the current Python version
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
+        run: |
+          echo "Python version:"
+          python -c "import sys; print(sys.version)"
+          echo "My custom environment variable value:"
+          echo "$MY_CUSTOM_VARIABLE"
         env:
-          purpose: "for testing"
+          MY_CUSTOM_VARIABLE: "some_value"
