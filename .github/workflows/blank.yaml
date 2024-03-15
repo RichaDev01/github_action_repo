@@ -23,6 +23,6 @@ jobs:
           echo "Python version:"
           python -c "import sys; print(sys.version)"
           echo "My custom environment variable value:"
-          echo "$MY_CUSTOM_VARIABLE"
+          echo "$purpose"
         env:
           purpose: "testing"
