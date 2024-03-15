@@ -1,12 +1,12 @@
 name: Python code
- 
+
 on: [push]
- 
+
 jobs:
   build:
- 
+
     runs-on: ubuntu-latest
- 
+
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
@@ -20,3 +20,5 @@ jobs:
       # You can test your matrix by printing the current Python version
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
+        env:
+          purpose: "for testing"
